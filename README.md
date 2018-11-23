@@ -79,7 +79,7 @@ common IDs:
 ## create UserID
 
 ### /create-user
-GET-Request
+CREATE - Request
 
 ### action
 Gernerate userid - GUID based on smartphone + salt (for security purposes) and save it in an clientcookie
@@ -100,7 +100,7 @@ Gernerate userid - GUID based on smartphone + salt (for security purposes) and s
 titel (unique)
 
 ### /create-event
-POST - Request
+CREATE - Request
 {
   userid : "12242354" 
   (optional) nfctagid : "13123123123" 
