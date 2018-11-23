@@ -86,9 +86,9 @@ CREATE - Request
 Gernerate userid - GUID based on smartphone + salt (for security purposes) and save it in an clientcookie
 
 ### Response
-{ 
-  userid : "12242354"
-}
+{  
+  userid : "12242354"  
+}  
 
 ----
 
@@ -102,19 +102,19 @@ titel (unique)
 
 ### /create-event
 CREATE - Request
-{
-  userid : "12242354" 
-  (optional) nfctagid : "13123123123" 
-  title : "Mittagessen" 
-}
+{  
+  userid : "12242354"  
+  (optional) nfctagid : "13123123123"  
+  title : "Mittagessen"  
+}  
 
 ### action
 Generate an unique EventID + URL or when given conet ist to an NFC-TagID and put it into DB
 
 ### Response
-{ 
+{  
   eventid : "1231231233" 
-}
+}  
 
 ----
 
@@ -126,10 +126,10 @@ Generate an unique EventID + URL or when given conet ist to an NFC-TagID and put
 
 ### /subscribe-event
 POST - Request
-{ 
-  userid : "12242354" 
-  eventid : "1231231233" 
-}
+{  
+  userid : "12242354"  
+  eventid : "1231231233"  
+}  
 
 ### Response
 
@@ -143,9 +143,9 @@ POST - Request
 
 ### /call_event
 POST - Request
-{ 
+{  
   eventid : "1231231233"
-}
+}  
 
 ### action
 Send a notification to all userids stored in DB beloning to the eventid
@@ -162,12 +162,12 @@ Send a notification to all userids stored in DB beloning to the eventid
 
 ### /call-event
 POST - Request
-{ 
-  userid : "12242354" 
-  eventid : "1231231233" 
-  (optional) new_nfctagid : "13123123123" 
-  (optional) new_titel : "Mittagessen AI2015" 
-}
+{   
+  userid : "12242354"  
+  eventid : "1231231233"  
+  (optional) new_nfctagid : "13123123123"  
+  (optional) new_titel : "Mittagessen AI2015"  
+}  
 
 ### action
 Change title or nfctagid of an event (save in DB)
@@ -189,9 +189,9 @@ GET - Request
 List all events saved in DB - title / userid  
 
 ### Response
-{ 
-  [ eventid : "1231231233", 
-    title : "Mittagessen" 
-    [userid] 
-    ] 
-}
+{  
+  [ eventid : "1231231233",  
+    title : "Mittagessen"  
+    [userid]  
+    ]  
+}  
