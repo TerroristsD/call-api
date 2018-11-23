@@ -68,8 +68,8 @@ Best Practices: https://docs.aws.amazon.com/codestar/latest/userguide/best-pract
 ----
 ----
 
-# REST-API
-
+# REST-API  
+  
 common IDs:
 - eventid : nnnnn (unique) - GUID
 - nfctagid : nnnnnnnn (for Event) (unique) 
@@ -79,53 +79,53 @@ common IDs:
 
 ## create UserID
 
-### /create-user
-CREATE - Request
+### /create-user  
+CREATE - Request  
 
-### action
-Gernerate userid - GUID based on smartphone + salt (for security purposes) and save it in an clientcookie
+### action  
+Gernerate userid - GUID based on smartphone + salt (for security purposes) and save it in an clientcookie  
 
-### Response
+### Response  
 {  
   userid : "12242354"  
 }  
 
 ----
 
-## Create Event
-
-### used IDs: 
+## Create Event  
+  
+### used IDs:   
 - userid
 - eventid
 
-titel (unique)
+titel (unique)  
 
-### /create-event
-CREATE - Request
+### /create-event  
+CREATE - Request  
 {  
   userid : "12242354"  
   (optional) nfctagid : "13123123123"  
   title : "Mittagessen"  
 }  
 
-### action
+### action  
 Generate an unique EventID + URL or when given conet ist to an NFC-TagID and put it into DB
 
-### Response
+### Response  
 {  
   eventid : "1231231233" 
 }  
 
 ----
 
-## Subscribe Event
+## Subscribe Event  
 
 ### used IDs: 
 - userid
 - eventid
 
-### /subscribe-event
-POST - Request
+### /subscribe-event  
+POST - Request  
 {  
   userid : "12242354"  
   eventid : "1231231233"  
@@ -137,31 +137,31 @@ POST - Request
 
 ## Call Event
 
-### used IDs: 
+### used IDs:   
 - userids
 - eventid
 
-### /call_event
-POST - Request
+### /call_event  
+POST - Request  
 {  
   eventid : "1231231233"
 }  
 
-### action
+### action  
 Send a notification to all userids stored in DB beloning to the eventid
 
-### Response
+### Response  
 
 ----
 
 ## Edit Event
 
-### used IDs: 
+### used IDs:   
 - userid
 - eventid
 
-### /call-event
-POST - Request
+### /call-event  
+POST - Request  
 {   
   userid : "12242354"  
   eventid : "1231231233"  
@@ -179,16 +179,16 @@ Change title or nfctagid of an event (save in DB)
 
 ## List allEvents
 
-### used IDs: 
+### used IDs:   
 none
 
-### /list-event
-GET - Request
+### /list-event  
+GET - Request  
 
 ### action
 List all events saved in DB - title / userid  
 
-### Response
+### Response  
 {  
   [ eventid : "1231231233",  
     title : "Mittagessen"  
