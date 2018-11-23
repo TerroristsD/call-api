@@ -105,9 +105,9 @@ titel (unique)
 ### /create_event
 POST - Request
 {
-  userid : "12242354"
-  (optional) nfctagid : "13123123123"
-  title : "Mittagessen"
+  userid : "12242354" 
+  (optional) nfctagid : "13123123123" 
+  title : "Mittagessen" 
 }
 
 ### action
@@ -115,7 +115,7 @@ Generate an unique EventID + URL or when given conet ist to an NFC-TagID and put
 
 ### Response
 { 
-  eventid : "1231231233"
+  eventid : "1231231233" 
   statuscode : 200, message: "created"  
 }
 
@@ -136,8 +136,8 @@ Codes:
 ### /subscribe_event
 POST - Request
 { 
-  userid : "12242354"
-  eventid : "1231231233"
+  userid : "12242354" 
+  eventid : "1231231233" 
 }
 
 ### Response
@@ -184,14 +184,14 @@ Codes:
 ### /call_event
 POST - Request
 { 
-  userid : "12242354"
-  eventid : "1231231233"
-  (optional) new_nfctagid : "13123123123"
-  (optional) new_titel : "Mittagessen AI2015"
+  userid : "12242354" 
+  eventid : "1231231233" 
+  (optional) new_nfctagid : "13123123123" 
+  (optional) new_titel : "Mittagessen AI2015" 
 }
 
 ### action
-Change title or nfctag of an event (save in DB)
+Change title or nfctagid of an event (save in DB)
 
 ### Response
 { statuscode : 200, message: "OK"}
@@ -207,6 +207,33 @@ Codes:
 
 
 ## List allEvents
+
+### used IDs: 
+none
+
+### /list_event
+GET - Request
+
+### action
+List all events saved in DB - title / userid  
+
+### Response
+{ 
+  [ eventid : "1231231233", 
+    title : "Mittagessen" 
+    [userid] 
+    ] 
+  statuscode : 200, message: "OK"
+
+}
+
+Codes:
+ 200 - event subscribed
+
+----
+
+
+
 
 ## Edit Event
 
