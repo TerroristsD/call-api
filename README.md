@@ -78,7 +78,7 @@ common IDs:
 
 ## create UserID
 
-### /create_user
+### /create-user
 GET-Request
 
 ### action
@@ -99,7 +99,7 @@ Gernerate userid - GUID based on smartphone + salt (for security purposes) and s
 
 titel (unique)
 
-### /create_event
+### /create-event
 POST - Request
 {
   userid : "12242354" 
@@ -123,7 +123,7 @@ Generate an unique EventID + URL or when given conet ist to an NFC-TagID and put
 - userid
 - eventid
 
-### /subscribe_event
+### /subscribe-event
 POST - Request
 { 
   userid : "12242354" 
@@ -159,7 +159,7 @@ Send a notification to all userids stored in DB beloning to the eventid
 - userid
 - eventid
 
-### /call_event
+### /call-event
 POST - Request
 { 
   userid : "12242354" 
@@ -181,7 +181,7 @@ Change title or nfctagid of an event (save in DB)
 ### used IDs: 
 none
 
-### /list_event
+### /list-event
 GET - Request
 
 ### action
@@ -194,8 +194,3 @@ List all events saved in DB - title / userid
     [userid] 
     ] 
 }
-
-----
-
-## Edit Event
-
