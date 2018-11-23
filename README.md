@@ -84,7 +84,7 @@ Gernerate userid - GUID based on smartphone + salt (for security purposes) and s
 
 ### Response
 { 
-  UserID : "12242354"
+  userid : "12242354"
   statusCode : 200, message: "Created"
 }
 
