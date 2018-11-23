@@ -22,10 +22,11 @@ Resources:
       Variables:
         Stage: !Ref Stage
 
-  HelloWorld:
+  CreateUser:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: index.handler
+      CodeUri: create_user/
+      Handler: app.lambdaHandler
       Runtime: nodejs8.10
       Environment:
         Variables:
@@ -34,15 +35,9 @@ Resources:
         Fn::ImportValue:
           !Join ['-', [!Ref 'ProjectId', !Ref 'AWS::Region', 'LambdaTrustRole']]
       Events:
-        GetEvent:
+        AnyRequest:
           Type: Api
           Properties:
             RestApiId: !Ref RestApi
-            Path: /
-            Method: get
-        PostEvent:
-          Type: Api
-          Properties:
-            RestApiId: !Ref RestApi
-            Path: /
-            Method: post
+            Path: /create_user
+            Method: any
