@@ -98,7 +98,7 @@ Gernerate userid - GUID based on smartphone + salt (for security purposes) and s
 - userid
 - eventid
 
-titel (unique)  
+title (unique)  
 
 ### /create-event  
 CREATE - Request  
