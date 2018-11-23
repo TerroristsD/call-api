@@ -113,7 +113,7 @@ Generate an unique EventID + URL or when given conet ist to an NFC-TagID and put
 
 ### Response  
 {  
-  eventid : "1231231233" 
+  eventid : "1231231233"  
 }  
 
 ----
@@ -144,7 +144,7 @@ POST - Request
 ### /call_event  
 POST - Request  
 {  
-  eventid : "1231231233"
+  eventid : "1231231233"  
 }  
 
 ### action  
@@ -190,8 +190,9 @@ List all events saved in DB - title / userid
 
 ### Response  
 {  
-  [ eventid : "1231231233",  
+  [  
+  eventid : "1231231233",  
     title : "Mittagessen"  
-    [userid]  
+    [userid]    
     ]  
 }  
