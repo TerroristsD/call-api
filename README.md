@@ -108,8 +108,8 @@ POST - Request
 
 Resopnse
 { 
-  EventID : "1231231233"
-  statusCode : 200, message: "Creted"  }
+  eventid : "1231231233"
+  statuscode : 200, message: "Created"  }
 
 exapmle:
  200 - event subscribed
